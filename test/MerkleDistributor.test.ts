@@ -225,7 +225,7 @@ for (const contract of ['MerkleDistributor']) {
           tree = new BalanceTree(
             wallets.map((wallet, ix) => {
               return { account: wallet.address, amount: BigNumber.from(ix + 1) }
-            }) 
+            })
           )
           distributor = await deployContract(distributorFactory, token.address, tree.getHexRoot(), contract)
           await token.setBalance(distributor.address, 201)
@@ -414,4 +414,3 @@ for (const contract of ['MerkleDistributor']) {
     })
   })
 }
-

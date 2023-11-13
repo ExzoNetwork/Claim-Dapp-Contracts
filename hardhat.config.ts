@@ -21,7 +21,7 @@ module.exports = {
   },
   networks: {
     mainnet: {
-      url: `${process.env.RPC_URL}`, 
+      url: `${process.env.RPC_URL}`,
       accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
     },
   },
